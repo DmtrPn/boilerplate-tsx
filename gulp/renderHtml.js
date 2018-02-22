@@ -17,24 +17,6 @@ function render(baseUrl) {
                 <link href="/static/externalStyles.css" media="all" rel="stylesheet">
             </head>
             <body>
-                <script>
-                  window.fbAsyncInit = function() {
-                    FB.init({
-                      appId            : '186669771839211',
-                      autoLogAppEvents : true,
-                      xfbml            : true,
-                      version          : 'v2.12'
-                    });
-                  };
-                
-                  (function(d, s, id){
-                     var js, fjs = d.getElementsByTagName(s)[0];
-                     if (d.getElementById(id)) {return;}
-                     js = d.createElement(s); js.id = id;
-                     js.src = "https://connect.facebook.net/ru_RU/sdk.js";
-                     fjs.parentNode.insertBefore(js, fjs);
-                   }(document, 'script', 'facebook-jssdk'));
-                </script>
                 <div id="root"></div>
                 <img src="/sprite.svg" class="i-hidden" />
                 <script>window.BASE_URL = "${baseUrl || ''}";</script>
