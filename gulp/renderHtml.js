@@ -18,7 +18,7 @@ function render(baseUrl) {
             </head>
             <body>
                 <div id="root"></div>
-                <img src="/sprite.svg" class="i-hidden" />
+                <img src="/sprite.svg" style="display: none;" />
                 <script>window.BASE_URL = "${baseUrl || ''}";</script>
                 <script src="/static/bundle.js"></script>
             </body>

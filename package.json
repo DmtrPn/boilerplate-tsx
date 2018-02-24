@@ -103,7 +103,6 @@
     "webpack": "3.4.1",
     "webpack-dev-server": "2.6.1",
     "webpack-stream": "4.0.0",
-    "wtg-types": "link:../types/",
     "yargs": "10.0.3"
   }
 }
