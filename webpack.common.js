@@ -29,7 +29,42 @@ module.exports = {
                 ]
             },
             {
-                test: /\.s?css$/,
+                test: /\_.scss$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            query: {
+                                modules: true,
+                                minimize: true,
+                                sourceMap: true,
+                                importLoaders: 2,
+                                localIdentName: '[local]'
+                            }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                sourceMap: true,
+                                plugins: (loader) => [
+                                    require('autoprefixer')()
+                                ]
+                            }
+                        },
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                modules: true,
+                                sourceMap: true
+                            }
+                        }
+                    ]
+                }),
+                exclude: /node_modules/,
+            },
+            {
+                test: /([A-Za-z]).scss$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: [
@@ -55,6 +90,7 @@ module.exports = {
                         {
                             loader: 'sass-loader',
                             options: {
+                                modules: true,
                                 sourceMap: true
                             }
                         }
@@ -90,7 +126,7 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            publicPath: '/static/',
+                            publicPath: 'static/',
                             outputPath: 'assets/'
                         }
                     }

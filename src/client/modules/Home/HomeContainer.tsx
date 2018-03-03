@@ -1,20 +1,19 @@
 import * as React from 'react';
-// import { connect } from 'react-redux';
+
 import { Home, HomeProps } from './Home';
 
 
-export interface HomeContainerProps extends HomeProps, HomeContainerMapProps, HomeContainerDispatchProps {
+interface Props extends HomeProps, MapProps, DispatchProps {
 }
 
-interface HomeContainerMapProps {
+interface MapProps {
 }
 
-interface HomeContainerDispatchProps {
+interface DispatchProps {
 }
 
-// @(connect(mapStateToProps, mapDispatchToProps) as any)
-export class HomeContainer extends React.Component<HomeContainerProps> {
-    constructor(props: HomeContainerProps) {
+export class HomeContainer extends React.Component<Props> {
+    constructor(props: Props) {
         super(props);
     }
 
@@ -26,13 +25,3 @@ export class HomeContainer extends React.Component<HomeContainerProps> {
         );
     }
 }
-//
-// function mapStateToProps(state: any): HomeContainerMapProps {
-//     return {
-//     };
-// }
-//
-// function mapDispatchToProps(dispatch: any): HomeContainerDispatchProps {
-//     return {
-//     };
-// }

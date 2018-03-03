@@ -1,12 +1,9 @@
 import * as React from 'react';
 
+import * as style from './Home.scss';
 import { Page } from '../common/Page';
 
-import * as style from './home.css';
-
-
 export interface HomeProps {
-
 }
 
 export function Home({...props}: HomeProps): JSX.Element {

@@ -1,19 +1,14 @@
 import * as React from 'react';
 
-import * as style from './Page.css';
+import * as style from './Page.scss';
 
 export interface PageProps {
     children?: React.ReactNode; //JSX.Element | JSX.Element [] | string;
-    pageLabel?: string;
-    previousUrl?: string;
-    previousLabel?: string;
 }
 
-export const Page = (
-    {
-        children
-    }: PageProps
-): JSX.Element => (
+export const Page = ({
+    children
+}: PageProps): JSX.Element => (
     <div className={style.root}>
         <div className={style.content}>
             {children}

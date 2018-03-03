@@ -5,23 +5,22 @@ import * as React from 'react';
 // import { StoreState } from '../../../store';
 import { Example, ExampleProps } from './Example';
 
-interface ExampleContainerProps extends ExampleProps, ExampleContainerMapProps, ExampleContainerDispatchProps {
+interface Props extends ExampleProps, MapProps, DispatchProps {
 }
 
-interface ExampleContainerMapProps {
+interface MapProps {
 }
 
-interface ExampleContainerDispatchProps {
+interface DispatchProps {
 }
 
-interface ExampleContainerState {
+interface State {
 }
 
 // @(connect(mapStateToProps, mapDispatchToProps) as any)
-export class ExampleContainer extends React.Component<ExampleContainerProps> {
-    public state: ExampleContainerState;
+export class ExampleContainer extends React.Component<Props, State> {
 
-    constructor(props: ExampleContainerProps) {
+    constructor(props: Props) {
         super(props);
 
         this.state = {
@@ -39,12 +38,12 @@ export class ExampleContainer extends React.Component<ExampleContainerProps> {
 }
 
 //
-// function mapStateToProps(state: StoreState, ownProps: ExampleContainerProps): ExampleContainerMapProps {
+// function mapStateToProps(state: StoreState, ownProps: Props): MapProps {
 //     return {
 //     };
 // }
 //
-// function mapDispatchToProps(dispatch: Dispatch<any>): ExampleContainerDispatchProps {
+// function mapDispatchToProps(dispatch: Dispatch<any>): DispatchProps {
 //     return {
 //     };
 // }

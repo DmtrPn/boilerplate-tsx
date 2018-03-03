@@ -1,15 +1,14 @@
 import * as React from 'react';
 
-import * as style from './Example.css';
+import * as style from './Example.scss';
 
 export interface ExampleProps {
 }
 
-interface ExampleComponentProps extends ExampleProps {
+interface Props extends ExampleProps {
 }
 
-export const Example = (
-    {}: ExampleComponentProps): JSX.Element => {
+export const Example = ({}: Props): JSX.Element => {
     return (
         <div className={style.root}>
         </div>

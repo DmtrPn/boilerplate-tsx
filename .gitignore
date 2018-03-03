@@ -4,4 +4,4 @@ node_modules/
 /public
 /dist
 *.log
-*.css.d.ts
+*.scss.d.ts
