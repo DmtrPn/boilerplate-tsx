@@ -2,14 +2,7 @@ import * as React from 'react';
 
 import { Home, HomeProps } from './Home';
 
-
-interface Props extends HomeProps, MapProps, DispatchProps {
-}
-
-interface MapProps {
-}
-
-interface DispatchProps {
+interface Props extends HomeProps {
 }
 
 export class HomeContainer extends React.Component<Props> {

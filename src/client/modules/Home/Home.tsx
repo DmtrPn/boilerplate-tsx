@@ -6,7 +6,10 @@ import { Page } from '../common/Page';
 export interface HomeProps {
 }
 
-export function Home({...props}: HomeProps): JSX.Element {
+interface Props extends HomeProps {
+}
+
+export function Home({...props}: Props): JSX.Element {
     return (
         <Page>
             <div className={style.root}>
